@@ -1,0 +1,25 @@
+
+.page-title {
+  float: left;
+}
+
+.search-input {
+  color: #444;
+  background: transparent:
+  margin: 0 0 0 0;
+  max-width: 65%;
+}
+
+.search-input input {
+  border: 0;
+  border-bottom: 2px solid #e6e6e6;
+  width: 60%;
+  padding: 0 0 0 10px;
+  font-size: 1em;
+  margin: 0 0 0 2%;
+  height: 2.5em;
+}
+
+.search-break {
+  display: inline-block;
+}
