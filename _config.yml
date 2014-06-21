@@ -1,23 +1,40 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:
+  redcarpet
+highlighter:
+  pygments
 
 # Permalinks
-permalink:        pretty
+permalink:
+  pretty
 
 # Setup
-title:            'Andrew Yurisich'
-tagline:          ''
-description:      ''
-url:              http://droogans.github.io
-paginate:         5
+title:
+  'Andrew Yurisich'
+tagline:
+  ''
+description:
+  ''
+url:
+  http://droogans.github.io
+baseurl:
+  '/'
+paginate:
+  5
+
+exclude:
+  ['Guardfile']
 
 author:
-  name:           'Andrew Yurisich'
-  url:            https://github.com/Droogans
+  name:
+    'Andrew Yurisich'
+  url:
+    https://github.com/Droogans
 
 # Custom vars
-version:          1.0.0
+version:
+  0.0.1
 
 github:
-  repo:           https://github.com/Droogans/droogans.github.io
+  repo:
+    https://github.com/Droogans/droogans.github.io
