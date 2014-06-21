@@ -15,7 +15,7 @@ layout: none
 {% endfor %}
 
 {% for page in site.pages %}
-    {% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.search_omit != true %}
+    {% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.title != 'Home' and page.search_omit != true %}
         {% if forloop.index > 1 %},{%endif%}{
             "title": {{page.title | json }},
             "content": {{page.content | strip_html | strip_newlines | json}},
