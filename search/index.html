@@ -3,10 +3,10 @@ layout: page
 title: Search
 search_omit: true
 ---
-<link rel="stylesheet" href="{{site.baseurl}}public/css/search.css">
+<link rel="stylesheet" href="{{site.baseurl}}search/search.css">
   <div ng-app="searchApp" ng-controller="PostListCtrl">
-    <script src="{{site.baseurl}}bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="{{site.baseurl}}scripts/search.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}search/search.js"></script>
 
     <span class="search-input">
       <input ng-model="query">

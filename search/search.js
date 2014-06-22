@@ -21,7 +21,7 @@ angular.module('searchApp', [], function ($interpolateProvider) {
 function PostListCtrl($scope, $http) {
     $scope.query = "";
     $scope.posts = [];
-    $http.get('/feeds/feed.json').success(function(data) {
+    $http.get('/search/feeds.json').success(function(data) {
         $scope.posts = data;
     });
 }
