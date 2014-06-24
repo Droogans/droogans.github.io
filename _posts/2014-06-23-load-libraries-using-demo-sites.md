@@ -9,17 +9,13 @@ Last week, one of my co-workers showed me a really nice trick you can use if you
 
 Here, I was about to test whether or not I could sort the results of a `map` call in lodash by going through the typical ceremony of using `require` in the node interpreter environment.
 
-```
-22:21:30 (my-branch) ~/code/js/nodeProject : node
-> ld = require('lodash')
-{ [Function: lodash]
-  // lots of functions and scrolling,
-  _: [Circular] }
-> ld.map([1, 7, 3, 9, 8], function (ele) { return ele; }).sort();
-[ 1, 3, 7, 8, 9 ]
-> ^D
-22:22:08 (my-branch) ~/code/js/nodeProject :
-```
+<table>
+ <tr>
+  <td align="center">
+   <img src="http://i.imgur.com/Kl7WxyZ.png" alt="Testing javascript functionality through node."></img>
+  </td>
+ </tr>
+</table>
 
 Fortunately, said co-worker was working with me when he saw me doing this, and stopped me.
 
