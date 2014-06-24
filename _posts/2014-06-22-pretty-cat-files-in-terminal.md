@@ -25,7 +25,7 @@ Here's an example of what the output looks like on my machine:
   <td>
     <code>$> cat src/openstack/identity.clj</code>
   </td>
- <tr>
+ </tr>
  <tr>
   <td align="center">
    <img src="https://i.imgur.com/RVOMxZj.png" alt="Pretty cat output for a clojure file"></img>
