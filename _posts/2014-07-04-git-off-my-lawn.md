@@ -33,9 +33,9 @@ $> git update --help
 
 ```
 git fetch --all --prune &&
-git cleanup
+git cleanup &&
 git pull --rebase upstream master &&
-git push origin master &&
+git push origin master
 ```
 
 What this command does is:
