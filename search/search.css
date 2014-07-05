@@ -2,6 +2,26 @@
   float: left;
 }
 
+.tag-list {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tag-cloud a {
+  color: #9a9a9a;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tag-cloud.filtered-tag {
+  background-color: #f0fbff;
+  border-color: #4ca5cf;
+}
+
+.filtered-tag a {
+  color: #4ca5cf;
+}
+
 .search-input {
   max-width: 65%;
   margin: 0;
