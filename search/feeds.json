@@ -9,6 +9,7 @@ layout: none
   "content": {{post.content | markdownify | strip_html | jsonify}},
   "link": "{{ site.url }}{{ post.url }}",
   "date": {{ post.date | jsonify }},
+  "tags": {{ post.tags | jsonify }},
   "excerpt": {{ post.snippet | jsonify }}
 }{%endif%}{% endfor %}
 {% for page in site.pages %}{% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.title != 'Home' and page.search_omit != true %}

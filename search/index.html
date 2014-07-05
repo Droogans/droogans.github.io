@@ -4,6 +4,7 @@ title: Search
 search_omit: true
 ---
 <link rel="stylesheet" href="{{ site.baseurl }}search/search.css">
+<link rel="stylesheet" href="{{ site.baseurl }}public/css/lanyon.css">
 <div ng-app="searchApp" ng-controller="PostListCtrl">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}search/search.js"></script>
@@ -13,7 +14,18 @@ search_omit: true
   </span>
   <ul>
     <li class="search-break"></li>
-    <li ng-repeat="post in posts | matchesQuery:query">
+    <ul class="tag-list">
+    {% capture tags %}
+    {% for tag in site.tags %}
+      {{ tag[0] }}
+    {% endfor %}
+    {% endcapture %}
+    {% assign sortedtags = tags | split:' ' | sort %}
+    {% for tag in sortedtags %}
+      <li class="round tag-cloud" ng-class="{ 'filtered-tag': tag === '{{tag}}' }"><a ng-click="addTag('{{ tag }}')">{{ tag }}</a></li>
+    {% endfor %}
+    </ul>
+    <li ng-repeat="post in posts | matchesQuery:query | matchesTag:tag">
       <a ng-href="{[{ post.link }]}">{[{ post.title }]}</a>
     </li>
   </ul>
