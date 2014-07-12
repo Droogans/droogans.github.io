@@ -23,7 +23,7 @@ $> git remote show origin
 $> git remote add upstream git@github.com:Org/projectYouForked.git
 ```
 
-Once you have this set up, you can use [my wonderful `git update` command](https://github.com/Droogans/dotfiles/blob/7c7f50ba65900b032c1c6dada93e25f30a69f32b/.gitconfig#L41), which requires that you have both an origin and upstream remote set up.
+Once you have this set up, you can use [this wonderful `git update` command](https://github.com/Droogans/dotfiles/blob/7c7f50ba65900b032c1c6dada93e25f30a69f32b/.gitconfig#L41), which requires that you have both an origin and upstream remote set up.
 
 ```
 $> git update --help
@@ -32,10 +32,10 @@ $> git update --help
 `git update` is aliased to
 
 ```
-git fetch --all --prune &&
-git cleanup &&
-git pull --rebase upstream master &&
-git push origin master
+git fetch --all --prune;
+git cleanup;
+git pull --rebase upstream master;
+git push origin master;
 ```
 
 What this command does is:
@@ -46,10 +46,12 @@ What this command does is:
  0. Pull any new changes underneath our existing ones.
  0. Push our new copy of the project to our repository.
 
+Make sure you're on master when you run this, or you may inadvertently trigger a rebase on your current branch.
+
 The command `git cleanup` is alised to:
 
 ```
-git branch --merged | grep  -v '\*master' | xargs -n 1 git branch -d
+git branch --merged | grep  -v '\\\\*master' | xargs -n 1 git branch -d
 ```
 
 This deletes the branches that have already been merged into master.
