@@ -5,7 +5,7 @@ categories: Work
 tags: [tech, tips-and-tricks, git]
 ---
 
-Today I saw a co-worker take a link from a specific line number in our team's github repository and place it in the comments section of a user story. This is very helpful for those who need to see a quick reference to the code that could be causing a defect, but it's *wrong*. Here's an what you need to do instead.
+Today I saw a co-worker take a link from a specific line number in our team's github repository and place it in the comments section of a user story. This is very helpful for those who need to see a quick reference to the code that could be causing a defect, but it's *wrong*. Here's what you need to do instead.
 
 First, the original setup had a link that looked like this.
 
