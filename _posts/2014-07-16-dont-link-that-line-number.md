@@ -31,9 +31,9 @@ Looks great, right? Here's that same link a few weeks later.
  </tr>
 </table>
 
-The problem with linking to line numbers is that if someone were to add some new code above line number 135, your link will still point there, regardless if the new code makes any sense. It's not *anchored* to the code, just the line numbers in the file.
+The problem with linking to line numbers is that if someone were to add some new code above line number 135, your link will still point there, regardless if the new code makes any sense. It's not *anchored* to the code, just to the line numbers in the file.
 
-Here's what you do instead. First, highlight the code that you want to link to, just like the urls previously did. Then, scroll to the top of the file and click the "Blame" button. It will jump right back to the highlighted section.
+Here's what you do instead. First, highlight the code that you want to link to, just like in the examples above. Then, scroll to the top of the file and click the "Blame" button. It will jump right back to the highlighted section.
 
 <table>
  <tr>
