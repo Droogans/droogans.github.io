@@ -9,7 +9,7 @@ Today I saw a co-worker take a link from a specific line number in our team's gi
 
 First, the original setup had a link that looked like this.
 
-<sub><sub><sub>https://github.com/Droogans/.emacs.d/blob/c8ac29f0/init.el#L135-L138</sub></sub></sub>
+<sub><sub><sub>https://github.com/Droogans/.emacs.d/blob/mac/init.el#L135-L138</sub></sub></sub>
 
 <table>
  <tr>
@@ -20,8 +20,6 @@ First, the original setup had a link that looked like this.
 </table>
 
 Looks great, right? Here's that same link a few weeks later.
-
-<sub><sub><sub>https://github.com/Droogans/.emacs.d/blob/c8ac29f0/init.el#L135-L138</sub></sub></sub>
 
 <table>
  <tr>
