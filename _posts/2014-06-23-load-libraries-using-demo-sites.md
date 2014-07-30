@@ -2,7 +2,7 @@
 layout: post
 title: Test Driving Javascript Libraries in the Browser
 categories: Work
-tags: [tech, tricks-and-tips]
+tags: [tech, tips-and-tricks]
 ---
 
 Last week, one of my co-workers showed me a really nice trick you can use if you find yourself needing to validate some snippet that features a javascript library.
