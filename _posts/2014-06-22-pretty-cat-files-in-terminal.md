@@ -2,7 +2,7 @@
 layout: post
 title: Colorizing Output from the cat Command
 categories: Work
-tags: [tech, tricks-and-tips]
+tags: [tech, tips-and-tricks]
 ---
 
 I have a special function called [pcat](https://github.com/Droogans/dotfiles/commit/6d1929aed66094851091705c9d5a11a590b53385), which stands for "pretty catenate", saved in my dotfiles repository on github. I really wish this style of cat would be the default on modern machines.
