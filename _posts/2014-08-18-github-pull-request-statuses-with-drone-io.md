@@ -7,7 +7,7 @@ tags: [tech, git, tips-and-tricks]
 
 The free CICD site [drone.io](http://drone.io) is a really useful, lightweight replacement for Jenkins for free, open source repositories. Being purpose built for just one thing means setting up a new project takes literally a tenth of the time compared to Jenkins.
 
-But one thing it is lacking is the ability to run CICD tests against new pull requests that have been merged into master first, and updating the status in the pull request while it's doing it. Most google searches for help will uncover forum posts with users requesting this feature, followed by promises from the drone.io team to get around to adding this functionality in "six to eight weeks".
+But one thing it is lacking is the ability to run CICD tests against new pull requests that have had master merged into it first, and updating the status in the pull request while it's doing that. Most Google searches for help will uncover forum posts with users requesting this feature, followed by promises from the drone.io team to get around to adding this functionality in "six to eight weeks".
 
 Fortunately, you can roll these things out yourself. Just follow these steps:
 
