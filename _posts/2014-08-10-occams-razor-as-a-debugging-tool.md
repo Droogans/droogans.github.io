@@ -2,7 +2,7 @@
 layout: post
 title: Occam's Razor as a Debugging Tool
 categories: Work
-tags: [tech, tricks-and-tips]
+tags: [tech, tips-and-tricks]
 ---
 
 On Friday, I had finished my tasks for the day a little early and decided to check up on the co-workers around me, just to see if any of them had anything blocking them, or anything interesting they'd like to show off to me. It turns out one had been stuck on an issue for the last 45 minutes. He had at least fifteen tabs open, sighed a lot, and was visibly exhausted. Basically, he was sending about a clear a signal as one can that they're debugging some odd behavior. The issue at hand revolved around a really pleasant function, as far as troubleshooting goes.
