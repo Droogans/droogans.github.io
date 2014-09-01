@@ -14,7 +14,7 @@ search_omit: true
   </span>
   <ul>
     <li class="search-break"></li>
-    <ul class="tag-list">
+    <div class="tag-list">
     {% capture tags %}
     {% for tag in site.tags %}
       {{ tag[0] }}
@@ -22,9 +22,9 @@ search_omit: true
     {% endcapture %}
     {% assign sortedtags = tags | split:' ' | sort %}
     {% for tag in sortedtags %}
-      <li class="round tag-cloud" ng-class="{ 'filtered-tag': tag === '{{tag}}' }"><a ng-click="addTag('{{ tag }}')">{{ tag }}</a></li>
+      <a class="round tag-cloud" ng-class="{ 'filtered-tag': tag === '{{tag}}' }" ng-click="addTag('{{ tag }}')">{{ tag }}</a>
     {% endfor %}
-    </ul>
+    </div>
     <li ng-repeat="post in posts | matchesQuery:query | matchesTag:tag">
       <a ng-href="{[{ post.link }]}">{[{ post.title }]}</a>
     </li>
