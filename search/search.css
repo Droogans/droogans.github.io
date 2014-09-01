@@ -3,11 +3,12 @@
 }
 
 .tag-list {
+  padding-bottom: 20px;
   padding-left: 0;
   margin-left: 0;
 }
 
-.tag-cloud a {
+.tag-cloud {
   color: #9a9a9a;
   cursor: pointer;
   text-decoration: none;
