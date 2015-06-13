@@ -31,17 +31,24 @@ angular.module('searchApp', [], function ($interpolateProvider) {
         }
         return matches;
     };
+})
+.controller('PostListCtrl', PostListCtrl)
+.config(function ($locationProvider) {
+    $locationProvider.html5Mode(true);
 });
 
-function PostListCtrl($scope, $http) {
+function PostListCtrl($scope, $http, $location) {
     $scope.query = "";
     $scope.posts = [];
-    $scope.tag = undefined;
     $http.get('/search/feeds.json').success(function(data) {
         $scope.posts = data;
     });
 
     $scope.addTag = function (tag) {
         $scope.tag = $scope.tag === tag ? undefined : tag;
+        $location.path('search').search('tag', $scope.tag).replace();
     };
+
+    $scope.addTag($location.search().tag);
+
 }
