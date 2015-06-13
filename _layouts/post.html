@@ -10,11 +10,11 @@ layout: default
 
 {% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
 {% unless difference contains '-' %}
-<div class="tags">
+<div class="tags" ng-app="searchApp" ng-controller="PostListCtrl">
   <h2>Tags:</h2>
   <ul>
     {% for tag in page.tags %}
-      <li class="round tag-cloud">{{ tag }}</li>
+      <a class="round tag-cloud" href="search?tag={{ tag }}">{{ tag }}</a>
     {% endfor %}
   </ul>
 </div>
