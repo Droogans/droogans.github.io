@@ -2,7 +2,7 @@
 layout: post
 title: Use Zero for Every Numbered List in Markdown
 categories: Work
-tags: [work, github, markdown]
+tags: [tips-and-tricks, tech]
 ---
 
 Here's a simple habit that can make working with numbered lists in markdown much simpler, especially if you're still mentally figuring out the order of the list as you're typing it.
