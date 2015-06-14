@@ -10,7 +10,7 @@ layout: default
 
 {% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
 {% unless difference contains '-' %}
-<div class="tags" ng-app="searchApp" ng-controller="PostListCtrl">
+<div class="tags">
   <h2>Tags:</h2>
   <ul>
     {% for tag in page.tags %}
