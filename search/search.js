@@ -31,10 +31,17 @@ function redrawPostsList(e) {
 }
 
 function addTagToSearchPath(tag) {
-    location.path('search').search('tag', tag.value).replace();
+    const urlParams = new URLSearchParams(window.location);
+    const tags = urlParams.get('tags') || [];
+    const uniqueTags = new Set([...tags, tag]);
+    urlParams.set('tags', [...uniqueTags]);
+    debugger;
+    location.search = urlParams.getAll('tags').toString();
 }
 
 window.posts = {};
-fetch('/search/feeds.json').then(posts => {
-    window.posts = posts;
+fetch('/search/feeds.json').then(response => {
+    response.json().then(posts => {
+        window.posts = posts;
+    });
 });
