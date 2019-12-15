@@ -5,9 +5,9 @@ categories: WhatsPlaying
 tags: [books, whats-playing]
 ---
 
-<center>
+<span style="margin:auto; display:table;">
 ![](https://i.imgur.com/VJipMzF.jpg)
-</center>
+</span>
 
 *Presentation Patterns* is 228 pages of information about how to give a good presentation. What's most interesting about this is that only 16 of them need to be read in serious depth. The rest are browsed, searched for, cross-referenced, and looked up as you go, like a choose-your-own-adventure book meets [tvtropes.org](https://tvtropes.org). Even though it was a bit tedious at times, I found myself thoroughly enjoying the act of keeping five or more fingers jammed at relevant sections, all while flipping back to the glossary *yet again* to decipher more terminology.
 
