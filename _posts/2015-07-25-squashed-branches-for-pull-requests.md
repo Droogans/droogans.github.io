@@ -9,7 +9,7 @@ tags: [tips-and-tricks, tech, git]
 
 Let's say I'm creating a new feature on a branch, and like many developers, I choose to [commit early and often](https://stackoverflow.com/questions/107264/how-often-to-commit-changes-to-source-control). Every new chunk of a feature triggers a commit and a push to my branch, including unrelated commits that clean up documentation and comments. By the time I'm finished, I may see something like this.
 
-```
+~~~
 09:05:24 (cool-new-feature) ~/code/js/project-name
 $: git lg 6
 ee11b36 - style(grunt): Sort tasks alphabetically (2 minutes ago) <Droogans>
@@ -18,7 +18,7 @@ aeef141 - feat(search): Autofocus on search box (8 minutes ago) <Droogans>
 7282f5f - chore(tags): Alter tags (1 hour ago) <Droogans>
 077e361 - feat(search): Outline WIP (2 hours ago) <Droogans>
 42354f2 - Merge pull request #45 from Droogans/old-feature (1 day ago) <Droogans>
-```
+~~~
 
 Although this represents a clean commit history, the inclusion of the phrase `"WIP"` in commit `077e361` definitely suggests that some cleaning up is in order. However, lumping all of this work into a single commit might strike others as heavy handed since there are unrelated fixes to documentation and some build automation.
 
@@ -30,25 +30,25 @@ A simple way around this is to include a branch for both the original pull reque
 
 First, I push up the `cool-new-feature` branch.
 
-```
+~~~
 09:21:10 (cool-new-feature) ~/code/js/project-name
 $: git push origin cool-new-feature
-```
+~~~
 
 From there I open a new pull request and ask for a review. Once it gets signed off, the maintainer asks me to push up the squashed version for merging.
 
-```
+~~~
 14:48:52 (cool-new-feature) ~/code/js/project-name
 $: git checkout -b cool-new-feature-squashed
 Switched to a new branch 'cool-new-feature-squashed'
 14:48:56 (cool-new-feature-squashed) ~/code/js/project-name
 $: git rebase -i 42354f2 # this is the merge commit from latest master
 Waiting for $EDITOR...
-```
+~~~
 
 From there, my editor would display the list of five commits I've made in this branch. I would tag probably do something like this for my summarized pull request.
 
-```
+~~~
 pick ee11b36 - style(grunt): Sort tasks alphabetically
 pick aeef141 - feat(search): Autofocus on search box
 squash 63c7f63 - refact(search): Clean up some unused code
@@ -73,13 +73,13 @@ pick 7282f5f - chore(tags): Alter tags
 #
 # Note that empty commits are commented out
 
-```
+~~~
 
 This reorders the commits so that some necessary (but still unrelated to the feature directly) is done first, then places any and all code related to the feature (including refactoring) into a single commit. Finally, a useful but unrelated commit is included at the end.
 
 The commit in the middle prompts me to make some decisions about how I'm going to name these commits. I change the commit message for the ugly "WIP" outline commit that I made at first, and replace it with something well-formed and succinct that summarizes the entire feature. Below that, I leave the squashed commits as a foot note for maintainers to read, using the opportunity to highlight what is going on in detail should they need to know later.
 
-```
+~~~
 # This is a combination of 3 commits.
 # The first commit's message is:
 feat(search): Cleaner search results
@@ -120,7 +120,7 @@ You had to click the search box to start searching, now you just type.
 #	new file:   app/src/search/service.js
 #   new file:   app/src/search/service.spec.js
 #
-```
+~~~
 
 This is really useful because it accomplishes a lot of good things at the same time.
 
@@ -132,7 +132,7 @@ This is really useful because it accomplishes a lot of good things at the same t
 
 Once I'm finished, I do a quick sanity check to make sure everything looks alright.
 
-```
+~~~
 14:51:33 (cool-new-feature-squashed) ~/code/js/project-name
 $: git lg 4
 68bd51e - style(grunt): Sort tasks alphabetically (1 minute ago) <Droogans>
@@ -141,7 +141,7 @@ f61bbe2 - chore(tags): Alter tags (1 minute ago) <Droogans>
 42354f2 - Merge pull request #45 from Droogans/old-feature (1 day ago) <Droogans>
 14:51:38 (cool-new-feature-squashed) ~/code/js/project-name
 $: git push origin cool-new-feature-squashed
-```
+~~~
 
 I open a new pull request, close the first one, and merge it.
 
