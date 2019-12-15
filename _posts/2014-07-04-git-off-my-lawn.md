@@ -5,7 +5,7 @@ categories: Work
 tags: [tech, git]
 ---
 
-After working through a tricky situation in an intern's git repository (her co-worker had literally squashed everything on master into one commit), I was asked how I did it. This led to some passing remarks from others participating in the conversation that almost everything I was showing her involved "bad, destructive commands", and I immediately agreed. My git work flow is centered around many commands that online resources will tell you, [quite bluntly](http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html), to never use. But many of those commands offer the most flexibility, granted you follow a couple of precautionary steps first.
+After working through a tricky situation in an intern's git repository (her co-worker had literally squashed everything on master into one commit), I was asked how I did it. This led to some passing remarks from others participating in the conversation that almost everything I was showing her involved "bad, destructive commands", and I immediately agreed. My git work flow is centered around many commands that online resources will tell you, [quite bluntly](https://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html), to never use. But many of those commands offer the most flexibility, granted you follow a couple of precautionary steps first.
 
 ### Step One: Fork Every Project You Ever Work On.
 
@@ -74,14 +74,14 @@ $> git checkout master
 $> git reset --hard origin/master
 ```
 
-Many people see `git reset --hard` and panic, and [for good reason](http://stackoverflow.com/a/9530204/881224). You can possibly lose everything you've worked on, given it's currently being tracked by git. But in this case, I wanted to "match" everything that was in the master branch on github, regardless of what's in my local master branch.
+Many people see `git reset --hard` and panic, and [for good reason](https://stackoverflow.com/a/9530204/881224). You can possibly lose everything you've worked on, given it's currently being tracked by git. But in this case, I wanted to "match" everything that was in the master branch on github, regardless of what's in my local master branch.
 
 ```
 $> git checkout feature-branch
 $> git rebase master
 ```
 
-When I ran this, I discovered that there were a lot of small commits on her `feature-branch`, for trivial fixes that were created while discovering what was going to work, and what wasn't. This sort of pattern leads to great [commit discipline](http://www.databasically.com/2011/03/14/git-commit-early-commit-often/), but awful rebasing. Every commit will likely reintroduce the same conflicts each time you approach the most recent commit, which is frustrating.
+When I ran this, I discovered that there were a lot of small commits on her `feature-branch`, for trivial fixes that were created while discovering what was going to work, and what wasn't. This sort of pattern leads to great [commit discipline](https://www.databasically.com/2011/03/14/git-commit-early-commit-often/), but awful rebasing. Every commit will likely reintroduce the same conflicts each time you approach the most recent commit, which is frustrating.
 
 An easy way around this is to squash everything you've worked on into one commit. That way, rebasing only has to run through one set of conflicts.
 
@@ -160,7 +160,7 @@ The next step is to get this up to github, where it can be reviewed and merged b
 $> git push origin -f
 ```
 
-The `-f` flag is the dreaded [force push](https://groups.google.com/forum/#!msg/jenkinsci-dev/-myjRIPcVwU/t4nkXONp8qgJ), possibly [the most famous](http://cdn.memegenerator.net/instances/400x/24736889.jpg) of all git operations in programming circles. It says, "my version of this branch is now the official version of this branch, for everyone". Obviously, doing this to the master branch is a really easy way to get a bad performance review at work, but in our *own fork, in our own branch*, there should be exactly zero other people depending on your version of history as a source of truth. Finally, we can have our co-worker merge this branch into master. Afterwards, we continue working like nothing happened.
+The `-f` flag is the dreaded [force push](https://groups.google.com/forum/#!msg/jenkinsci-dev/-myjRIPcVwU/t4nkXONp8qgJ), possibly [the most famous](https://cdn.memegenerator.net/instances/400x/24736889.jpg) of all git operations in programming circles. It says, "my version of this branch is now the official version of this branch, for everyone". Obviously, doing this to the master branch is a really easy way to get a bad performance review at work, but in our *own fork, in our own branch*, there should be exactly zero other people depending on your version of history as a source of truth. Finally, we can have our co-worker merge this branch into master. Afterwards, we continue working like nothing happened.
 
 ```
 $> git checkout master

@@ -1,6 +1,6 @@
-# [andrew.yurisich.com](http://andrew.yurisich.com)
+# [andrew.yurisich.com](https://andrew.yurisich.com)
 
-Uses the wonderful [Lanyon](http://lanyon.getpoole.com/) theme, which sits on top of [Jekyll](http://jekyllrb.com).
+Uses the wonderful [Lanyon](https://lanyon.getpoole.com/) theme, which sits on top of [Jekyll](https://jekyllrb.com).
 
 ## License
 

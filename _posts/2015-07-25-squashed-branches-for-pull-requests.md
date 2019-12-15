@@ -5,9 +5,9 @@ categories: Work
 tags: [tips-and-tricks, tech, git]
 ---
 
-[Squashing pull requests](http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) is a common theme in many software projects that use git for version control. I won't go over the reasons why in depth, but rather focus on a workflow that can help address a lot of the controversy around squashing pull requests into a single commit.
+[Squashing pull requests](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) is a common theme in many software projects that use git for version control. I won't go over the reasons why in depth, but rather focus on a workflow that can help address a lot of the controversy around squashing pull requests into a single commit.
 
-Let's say I'm creating a new feature on a branch, and like many developers, I choose to [commit early and often](http://stackoverflow.com/questions/107264/how-often-to-commit-changes-to-source-control). Every new chunk of a feature triggers a commit and a push to my branch, including unrelated commits that clean up documentation and comments. By the time I'm finished, I may see something like this.
+Let's say I'm creating a new feature on a branch, and like many developers, I choose to [commit early and often](https://stackoverflow.com/questions/107264/how-often-to-commit-changes-to-source-control). Every new chunk of a feature triggers a commit and a push to my branch, including unrelated commits that clean up documentation and comments. By the time I'm finished, I may see something like this.
 
 ```
 09:05:24 (cool-new-feature) ~/code/js/project-name
@@ -24,7 +24,7 @@ Although this represents a clean commit history, the inclusion of the phrase `"W
 
 ## Making `-squashed` Branches
 
-> <sub>[A visual summary](http://i.imgur.com/EVvh9Mv.jpg).</sub>
+> <sub>[A visual summary](https://i.imgur.com/EVvh9Mv.jpg).</sub>
 
 A simple way around this is to include a branch for both the original pull request (warts and all), and another branch that officially gets merged. Here's the same example from above continued in this way.
 

@@ -25,14 +25,14 @@ script:
 
 This is a bare-bones setup for running (free) end to end tests using only the Travis VM, and on first glance appears normal. And you'd be right thinking this. Although that last command does start a background selenium server, it has an awful side effect of polluting the logs with output containing javascript that runs against the browser during the test run.
 
-For example, here is *just one* of the many tests that run on every pull request of [the encore-ui project](http://rackerlabs.github.io/encore-ui/#/overview) I've been contributing to lately.
+For example, here is *just one* of the many tests that run on every pull request of [the encore-ui project](https://rackerlabs.github.io/encore-ui/#/overview) I've been contributing to lately.
 
 ```
   rxDiskSize
 17:01:46.133 INFO - Executing: [get: data:text/html,<html></html>])
 17:01:46.168 INFO - Done: [get: data:text/html,<html></html>]
-17:01:46.175 INFO - Executing: [execute script: window.name = "NG_DEFER_BOOTSTRAP!" + window.name;window.location.replace("http://localhost:9001/#/component/rxDiskSize");, []])
-17:01:46.231 INFO - Done: [execute script: window.name = "NG_DEFER_BOOTSTRAP!" + window.name;window.location.replace("http://localhost:9001/#/component/rxDiskSize");, []]
+17:01:46.175 INFO - Executing: [execute script: window.name = "NG_DEFER_BOOTSTRAP!" + window.name;window.location.replace("https://localhost:9001/#/component/rxDiskSize");, []])
+17:01:46.231 INFO - Done: [execute script: window.name = "NG_DEFER_BOOTSTRAP!" + window.name;window.location.replace("https://localhost:9001/#/component/rxDiskSize");, []]
 17:01:46.261 INFO - Executing: [execute script: return window.location.href;, []])
 17:01:46.520 INFO - Done: [execute script: return window.location.href;, []]
 17:01:46.555 INFO - Executing: [execute async script: try { return (function (attempts, asyncCallback) {
@@ -133,7 +133,7 @@ The end result is a clean, informative test run report that looks just the one y
 ```
 $ protractor protractor.conf.js
 
-Using the selenium server at http://localhost:4444/wd/hub
+Using the selenium server at https://localhost:4444/wd/hub
   rxDiskSize
   ✓ should still have 420 GB as test data on the page
   ✓ should convert 420 GB back to gigabytes

@@ -14,7 +14,7 @@ First, the original setup had a link that looked like this.
 <table>
  <tr>
   <td align="center">
-   <img src="http://i.imgur.com/RcNvi1C.png" alt="A snippet from a current github file."></img>
+   <img src="https://i.imgur.com/RcNvi1C.png" alt="A snippet from a current github file."></img>
   </td>
  </tr>
 </table>
@@ -24,7 +24,7 @@ Looks great, right? Here's that same link a few weeks later.
 <table>
  <tr>
   <td align="center">
-   <img src="http://i.imgur.com/DkKkwJV.png" alt="A snippet from an out of date github file."></img>
+   <img src="https://i.imgur.com/DkKkwJV.png" alt="A snippet from an out of date github file."></img>
   </td>
  </tr>
 </table>

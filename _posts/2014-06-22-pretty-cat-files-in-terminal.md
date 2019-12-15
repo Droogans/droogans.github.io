@@ -16,7 +16,7 @@ function pcat() {
 alias cat=pcat
 ```
 
-I've omitted the part where you get [`pip`](https://pip.pypa.io/en/latest/installing.html) installed on your machine first, and install the `pygments` module for [colorizing output based on a detected language](http://pygments.org/demo/374513/). This is required.
+I've omitted the part where you get [`pip`](https://pip.pypa.io/en/latest/installing.html) installed on your machine first, and install the `pygments` module for [colorizing output based on a detected language](https://pygments.org/demo/374513/). This is required.
 
 Here's an example of what the output looks like on my machine:
 
