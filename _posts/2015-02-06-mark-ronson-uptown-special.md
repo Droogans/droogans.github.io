@@ -5,13 +5,9 @@ categories: WhatsPlaying
 tags: [music, whats-playing]
 ---
 
-<table>
- <tr>
-  <td align="center">
-   <img src="https://images.musictimes.com/data/images/full/18303/mark-ronson-uptown-special-jpg.jpg?w=600" alt="Cover art for Mark Ronson's 'Uptown Special'"></img>
-  </td>
- </tr>
-</table>
+<span style="margin:auto; display:table;">
+![Cover art for Mark Ronson's 'Uptown Special']({{ site.baseurl }}public/images/uptown-special.png)
+</span>
 
 This review is dedicated to my brother, who got me a copy of this album, urging me to listen to it. I wasn't supposed to judge it, and simply listen to it with an open mind and let him know what I thought. I did, and I guess the best way I can think to prove this to him is to write a review of Mark Ronson's latest release, "Uptown Special".
 
