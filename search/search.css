@@ -44,3 +44,11 @@
 .search-break {
   display: inline-block;
 }
+
+.hidden-by-tag {
+  display: none;
+}
+
+.hidden-by-query {
+  display: none;
+}
