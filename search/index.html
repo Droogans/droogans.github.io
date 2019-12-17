@@ -9,11 +9,11 @@ search_omit: true
   <script type="text/javascript" src="{{ site.baseurl }}search/search.js"></script>
 
   <span class="search-input">
-    <input id="query" onkeyup="filterPostsByQuery(event)" type="text" autofocus>
+    <input id="query" onkeyup=filterPostsByQuery(event) type="text" autofocus>
   </span>
   <ul>
     <li class="search-break"></li>
-    <div class="tag-list">
+    <div id="tagList" class="tag-list">
     {% capture tags %}
     {% for tag in site.tags %}
       {{ tag[0] }}
@@ -21,7 +21,7 @@ search_omit: true
     {% endcapture %}
     {% assign sortedtags = tags | split:' ' | sort %}
     {% for tag in sortedtags %}
-      <a class="round tag-cloud" onClick=filterPostsByTag("{{ tag }}")>{{ tag }}</a>
+      <a class="round tag-cloud" onclick=filterPostsByTag(event)>{{ tag }}</a>
     {% endfor %}
     </div>
   </ul>
