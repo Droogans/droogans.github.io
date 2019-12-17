@@ -1,54 +1,60 @@
-angular.module('searchApp', [], function ($interpolateProvider) {
-    $interpolateProvider.startSymbol('{[{');
-    $interpolateProvider.endSymbol('}]}');
-})
-.filter('matchesQuery', function() {
-    return function (items, query){
-        var alternate = query.replace(/ /g,"_").toLowerCase();
-        var lcQuery = query.toLowerCase();
-        var matches = [];
-        for (var i=0; i < items.length; i++) {
-            var matchesStrictly = items[i].title.toLowerCase().indexOf(lcQuery) !== -1;
-            var matchesLoosely = items[i].content.indexOf(alternate) !== -1;
-            if (matchesStrictly || matchesLoosely) {
-                matches.push(items[i]);
+function filterPostsByTag(event, tag) {
+    // active tag
+    const classList = event.target.classList;
+    if (classList.contains("filtered-tag")) {
+        classList.remove("filtered-tag");
+    } else {
+        classList.add("filtered-tag");
+    }
+
+    const tagList = window.document.getElementById("tagList");
+    const activeTags = tagList.getElementsByClassName("filtered-tag");
+    const tags = [];
+    for (activeTag of activeTags) {
+        tags.push(activeTag.innerText);
+    }
+
+    for (post of matchingPosts.getElementsByTagName("li")) {
+        if (tags.length === 0) {
+            post.classList.remove("hidden-by-tag");
+            continue;
+        }
+
+        let allMatches = true;
+        for (tag of tags) {
+            const postTags = post.getAttribute("data-tags").split(" ");
+            if (postTags.indexOf(tag) === -1) {
+                post.classList.add("hidden-by-tag");
+                allMatches = false;
+                break;
             }
         }
-        return matches;
-    };
-})
-.filter('matchesTag', function () {
-    return function (items, tag) {
-        if (tag === undefined) {
-            return items;
-        }
-
-        var matches = [];
-        for (var i=0; i < items.length; i++) {
-            if (items[i].tags.indexOf(tag) > -1) {
-                matches.push(items[i]);
-            }
-        }
-        return matches;
-    };
-})
-.controller('PostListCtrl', PostListCtrl)
-.config(function ($locationProvider) {
-    $locationProvider.html5Mode(true);
-});
-
-function PostListCtrl($scope, $http, $location) {
-    $scope.query = "";
-    $scope.posts = [];
-    $http.get('/search/feeds.json').success(function(data) {
-        $scope.posts = data;
-    });
-
-    $scope.addTag = function (tag) {
-        $scope.tag = $scope.tag === tag ? undefined : tag;
-        $location.path('search').search('tag', $scope.tag).replace();
-    };
-
-    $scope.addTag($location.search().tag);
-
+        allMatches && post.classList.remove("hidden-by-tag");
+    }
 }
+
+function filterPostsByQuery(event) {
+    const q = query.value.toLowerCase();
+    const alt = q.replace(/ /g,"_");
+    const matchingPosts = window.document.getElementById("matchingPosts");
+    for (post of matchingPosts.getElementsByTagName("li")) {
+        const link = post.firstElementChild.pathname;
+        const item = window.posts[link];
+        const title = item.title.toLowerCase();
+        if (q && (title.indexOf(q) === -1 || (item.excerpt && item.excerpt.indexOf(alt) === -1))) {
+            post.classList.add("hidden-by-query");
+        } else {
+            post.classList.remove("hidden-by-query");
+        }
+    }
+}
+
+window.posts = {};
+fetch("/search/feeds.json").then(response => {
+    response.json().then(posts => {
+        for (post of posts) {
+            const link = new URL(post.link).pathname;
+            window.posts[link] = post;
+        }
+    });
+});

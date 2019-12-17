@@ -1,8 +1,9 @@
-# Permalinks
+plugins:
+  - jekyll-paginate
+
 permalink:
   pretty
 
-# Setup
 title:
   'Andrew Yurisich'
 tagline:
@@ -25,7 +26,6 @@ author:
   url:
     https://github.com/Droogans
 
-# Custom vars
 version:
   0.0.1
 
