@@ -9,25 +9,17 @@ Today I saw a co-worker take a link from a specific line number in our team's gi
 
 First, the original setup had a link that looked like this.
 
-<sub><sub><sub>https://github.com/Droogans/.emacs.d/blob/mac/init.el#L135-L138</sub></sub></sub>
+<sub><sub><a href="https://github.com/Droogans/.emacs.d/blob/6ecd482d7c197f7dc6b11b3e6e9d3a608fef0b00/init.el#L135-L138">github.com/Droogans/.emacs.d/blob/mac/init.el#L135-L138</a></sub></sub>
 
-<table>
- <tr>
-  <td align="center">
-   <img src="https://i.imgur.com/RcNvi1C.png" alt="A snippet from a current github file."></img>
-  </td>
- </tr>
-</table>
+<span class="image-section">
+![A snippet from a current github file](https://i.imgur.com/RcNvi1C.png)
+</span>
 
 Looks great, right? Here's that same link a few weeks later.
 
-<table>
- <tr>
-  <td align="center">
-   <img src="https://i.imgur.com/DkKkwJV.png" alt="A snippet from an out of date github file."></img>
-  </td>
- </tr>
-</table>
+<span class="image-section">
+![A snippet from an out of date github file.](https://i.imgur.com/DkKkwJV.png)
+</span>
 
 The problem with linking to line numbers is that if someone were to add some new code above line number 135, your link will still point there, regardless if the new code makes any sense. It's not *anchored* to the code, just to the line numbers in the file.
 
