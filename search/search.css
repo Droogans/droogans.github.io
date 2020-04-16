@@ -1,3 +1,7 @@
+html {
+    line-height: 1.4em;
+}
+
 .page-title {
   float: left;
 }
@@ -14,13 +18,14 @@
   text-decoration: none;
 }
 
-.tag-cloud.filtered-tag {
-  background-color: #f0fbff;
-  border-color: #4ca5cf;
+.tag-cloud:hover {
+  text-decoration: none
 }
 
-.filtered-tag a {
-  color: #4ca5cf;
+.tag-cloud.filtered-tag {
+  color: #000000;
+  background-color: #b6e7ff;
+  border-color: #4ca5cf;
 }
 
 .search-input {
