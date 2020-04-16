@@ -18,7 +18,7 @@ paginate:
   5
 
 exclude:
-  ['Guardfile']
+  ['Makefile']
 
 author:
   name:
