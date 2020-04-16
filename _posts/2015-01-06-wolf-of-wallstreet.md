@@ -8,7 +8,7 @@ tags: [movies, whats-playing]
 <table>
  <tr>
   <td align="center">
-   <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/WallStreet2013poster.jpg" alt="Poster from the movie 'The Wolf of Wall Street'"></img>
+   <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/The_Wolf_of_Wall_Street_%282013%29.png" alt="Poster from the movie 'The Wolf of Wall Street'" />
   </td>
  </tr>
 </table>

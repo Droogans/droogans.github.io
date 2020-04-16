@@ -27,7 +27,7 @@ This is a bare-bones setup for running (free) end to end tests using only the Tr
 
 For example, here is *just one* of the many tests that run on every pull request of [the encore-ui project](https://rackerlabs.github.io/encore-ui/#/overview) I've been contributing to lately.
 
-~~~
+```txt
   rxDiskSize
 17:01:46.133 INFO - Executing: [get: data:text/html,<html></html>])
 17:01:46.168 INFO - Done: [get: data:text/html,<html></html>]
@@ -114,7 +114,7 @@ catch(e) { throw (e instanceof Error) ? e : new Error(e); }, [body]]
 17:01:47.101 INFO - Executing: [get text: 36 [[FirefoxDriver: firefox on LINUX (54c8e519-0211-45d5-a1f2-64bb2526e652)] -> css selector: .component-demo ul li]])
 17:01:47.114 INFO - Done: [get text: 36 [[FirefoxDriver: firefox on LINUX (54c8e519-0211-45d5-a1f2-64bb2526e652)] -> css selector: .component-demo ul li]]
   ✓ should still have 420 GB as test data on the page
-~~~
+```
 
 Even though I feel it goes without saying, this kind of output is not something I look forward to seeing, especially when my end to end tests are breaking the build. In fact, many of the pull request test runs wind up [maxing out the logs at 10000 lines](https://travis-ci.org/rackerlabs/encore-ui/builds/33919596#L10000), potentially killing all ability to debug a broken test. This issue can compound when faced with a bug that isn't reproducible on my machine, but appears to break in the CI environment.
 
