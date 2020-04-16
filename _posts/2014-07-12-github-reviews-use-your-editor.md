@@ -11,13 +11,10 @@ Here's a secret: when code changes, it changes in more places than what's shown 
 
 If this hasn't happened to you, it will eventually, given your team and codebase grow to such a size as to make it impossible for one person to have mastery over all of it. So in an effort to reduce the [silo effect](https://en.wikipedia.org/wiki/Information_silo), you may participate in code reviews. The number one way to do this is in the web interface provided by github.
 
-<table>
- <tr>
-  <td align="center">
-   <img src="https://i.imgur.com/sDbQ01N.png" alt="A sample of github's web based diff view."></img>
-  </td>
- </tr>
-</table>
+
+<span class="image-section">
+![A sample of github's web based diff view.](https://i.imgur.com/sDbQ01N.png)
+</span>
 
 Although convenient, it lacks several things:
 

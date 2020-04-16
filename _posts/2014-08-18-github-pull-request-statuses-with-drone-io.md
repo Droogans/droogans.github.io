@@ -17,17 +17,13 @@ Fortunately, you can roll these things out yourself. Just follow these steps:
 
 For example:
 
-<table>
- <tr>
-  <td align="center">
-   <img src="https://i.imgur.com/QXQE74f.png" alt="drone.io project settings page."></img>
-  </td>
- </tr>
-</table>
+<span class="image-section">
+![drone.io project settings page](https://i.imgur.com/QXQE74f.png)
+</span>
 
 - Next, add some code that will allow you to replicate the behavior that is available in other CICD providers, such as TravisCI.
 
-~~~bash
+```
 function postStatus {
   curl -so /dev/null -X POST -H "Authorization: token $OAUTH_TOKEN" -d "{\"state\": \"$1\", \"target_url\": \"$DRONE_BUILD_URL\", \"description\": \"Built and tested on drone.io\", \"context\": \"Built and tested on drone.io\"}" https://api.github.com/repos/:YOUR_NAME:/:YOUR_REPO:/statuses/$DRONE_COMMIT;
 }
@@ -39,12 +35,11 @@ if [ $? -ne "0" ]; then
   postStatus error
   exit 1
 fi
-
-~~~
+```
 
 Finally, add code for your specific project to actually do some testing. Here's a simple example that you might use for a node app.
 
-~~~bash
+```
 npm install --loglevel=warn
 if [ $? -ne "0" ]; then
   postStatus error
@@ -57,6 +52,6 @@ if [ $? -eq "0" ]; then
 else
   postStatus failure
 fi
-~~~
+```
 
 That's it! Once your vanilla setup with drone.io is set up, everything else should just work.

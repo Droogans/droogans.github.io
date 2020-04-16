@@ -5,7 +5,7 @@ categories: WhatsPlaying
 tags: [music, whats-playing]
 ---
 
-<span style="margin:auto; display:table;">
+<span class="image-section">
 ![Cover art for Mark Ronson's 'Uptown Special']({{ site.baseurl }}public/images/uptown-special.png)
 </span>
 

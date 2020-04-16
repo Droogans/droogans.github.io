@@ -320,6 +320,15 @@ a.sidebar-nav-item:focus {
   color: #9a9a9a;
 }
 
+.image-section {
+    margin: auto;
+    display:table;
+}
+.image-caption {
+    display: flex;
+    place-content: center;
+}
+
 /* Tags */
 .round {
   -webkit-border-radius: 12px;
